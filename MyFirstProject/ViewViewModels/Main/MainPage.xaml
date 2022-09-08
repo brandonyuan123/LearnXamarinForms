@@ -7,5 +7,21 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Row="0" Grid.Column="0" Text="Layouts"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Image"/>
+            <Button Grid.Row="1" Grid.Column="0" Text="List View"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Controls"/>
+            <Button Grid.Row="2" Grid.Column="0" Text="SQLite"/>
+        </Grid>
     </StackLayout>
 </ContentPage>
