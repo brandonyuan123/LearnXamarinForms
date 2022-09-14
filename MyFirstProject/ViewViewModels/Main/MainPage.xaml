@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="1" CornerRadius="0">
-                <Label Text="My Mobile App!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text="{Binding Subtitle}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
             <Grid>
                 <Grid.ColumnDefinitions>

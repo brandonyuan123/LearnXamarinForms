@@ -8,9 +8,17 @@ namespace MyFirstProject.ViewViewModels.Main
 {
     public class MainPageViewModels : BaseViewModel
     {
+        string subtitle = string.Empty;
+        public string Subtitle
+        {
+            get { return subtitle; }
+            set { SetProperty(ref subtitle, value); }
+        }
+
         public MainPageViewModels()
         {
             Title = Titles.MainPageTitle;
+            Subtitle = Titles.MainPageSubtitle;
         }
     }
 }
