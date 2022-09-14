@@ -19,7 +19,8 @@
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" Text="Layouts"/>
+                <Button Grid.Row="0" Grid.Column="0" Text="Layouts"
+                        Command="{Binding OnLayoutClicked}"/>
                 <Button Grid.Row="0" Grid.Column="1" Text="Image"/>
                 <Button Grid.Row="1" Grid.Column="0" Text="List View"/>
                 <Button Grid.Row="1" Grid.Column="1" Text="Controls"/>
