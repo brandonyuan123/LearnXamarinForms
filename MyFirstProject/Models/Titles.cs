@@ -8,5 +8,10 @@ namespace MyFirstProject.Models
     {
         public static string MainPageTitle { get; } = "Main Page";
         public static string MainPageSubtitle { get; } = "My Mobile App!";
+        public static string LayoutTitle { get; } = "Layout View";
+        public static string ImageTitle { get; } = "Image View";
+        public static string ListViewTitle { get; } = "ListView View";
+        public static string SQLiteTitle { get; } = "SQLite View";
+        public static string ControlsTitle { get; } = "Controls View";
     }
 }

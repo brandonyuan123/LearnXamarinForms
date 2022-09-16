@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Layout
+namespace MyFirstProject.ViewViewModels.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LayoutView : ContentPage
+    public partial class ControlsView : ContentPage
     {
-        public LayoutView()
+        public ControlsView()
         {
             InitializeComponent();
-            this.BindingContext = new LayoutViewModel();
+            this.BindingContext = new ControlsViewModel();
         }
     }
 }

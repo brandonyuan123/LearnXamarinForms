@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Layout
+namespace MyFirstProject.ViewViewModels.Image
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LayoutView : ContentPage
+    public partial class ImageView : ContentPage
     {
-        public LayoutView()
+        public ImageView()
         {
             InitializeComponent();
-            this.BindingContext = new LayoutViewModel();
+            this.BindingContext = new ImageViewModel();
         }
     }
 }

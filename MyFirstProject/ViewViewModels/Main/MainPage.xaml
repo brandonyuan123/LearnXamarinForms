@@ -21,10 +21,14 @@
 
                 <Button Grid.Row="0" Grid.Column="0" Text="Layouts"
                         Command="{Binding OnLayoutClicked}"/>
-                <Button Grid.Row="0" Grid.Column="1" Text="Image"/>
-                <Button Grid.Row="1" Grid.Column="0" Text="List View"/>
-                <Button Grid.Row="1" Grid.Column="1" Text="Controls"/>
-                <Button Grid.Row="2" Grid.Column="0" Text="SQLite"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Image"
+                        Command="{Binding OnImageClicked}"/>
+                <Button Grid.Row="1" Grid.Column="0" Text="List View"
+                        Command="{Binding OnListViewClicked}"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="Controls"
+                        Command="{Binding OnControlsClicked}"/>
+                <Button Grid.Row="2" Grid.Column="0" Text="SQLite"
+                        Command="{Binding OnSQLiteClicked}"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

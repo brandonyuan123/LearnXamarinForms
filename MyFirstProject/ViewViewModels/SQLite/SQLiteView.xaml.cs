@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Layout
+namespace MyFirstProject.ViewViewModels.SQLite
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LayoutView : ContentPage
+    public partial class SQLiteView : ContentPage
     {
-        public LayoutView()
+        public SQLiteView()
         {
             InitializeComponent();
-            this.BindingContext = new LayoutViewModel();
+            this.BindingContext = new SQLiteViewModel();
         }
     }
 }
