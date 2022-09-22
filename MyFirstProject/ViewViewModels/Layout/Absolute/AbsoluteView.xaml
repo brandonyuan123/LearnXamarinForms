@@ -1,17 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModels.Layout.LayoutView"
+             x:Class="MyFirstProject.ViewViewModels.Layout.Absolute.AbsoluteView"
              Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Layout Menu"
+            <Label Text="Absolute Menu"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        
-
-        <Button Grid.Row="0" Grid.Column="0" Text="Absolute"
-                        Command="{Binding OnAbsoluteClicked}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
