@@ -6,7 +6,7 @@
    
         <StackLayout>
             <Label Text="Layout Menu"
-                VerticalOpt ions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     
