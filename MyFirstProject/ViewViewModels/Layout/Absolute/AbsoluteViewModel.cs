@@ -1,5 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModels.Layout.Absolute.AbsolutePage;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +13,15 @@ namespace MyFirstProject.ViewViewModels.Layout.Absolute
     {
         public AbsoluteViewModel()
         {
-            Title = Titles.AbsoluteTitle;
+            Title = Titles.AbsolutePageTitle;
+            OnAbsolutePageClicked = new Command(OnAbsolutePageClickedAsync);
+        }
+
+        public ICommand OnAbsolutePageClicked { get; set; }
+
+        private async void OnAbsolutePageClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new AbsolutePageView());
         }
     }
 }
