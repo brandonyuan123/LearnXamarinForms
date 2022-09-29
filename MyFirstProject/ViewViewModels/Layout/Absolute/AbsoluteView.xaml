@@ -22,8 +22,7 @@
                      AbsoluteLayout.LayoutBounds="0.5,1,100,25"
                      AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-        <Button Grid.Row="4" Grid.Column="0" Text="Absolute Page"
-                        Command="{Binding OnAbsolutePageClicked}"/>
+        
 
     </AbsoluteLayout>
 </ContentPage>

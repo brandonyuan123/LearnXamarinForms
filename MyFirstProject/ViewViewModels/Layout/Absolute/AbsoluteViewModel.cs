@@ -14,14 +14,7 @@ namespace MyFirstProject.ViewViewModels.Layout.Absolute
         public AbsoluteViewModel()
         {
             Title = Titles.AbsolutePageTitle;
-            OnAbsolutePageClicked = new Command(OnAbsolutePageClickedAsync);
-        }
-
-        public ICommand OnAbsolutePageClicked { get; set; }
-
-        private async void OnAbsolutePageClickedAsync(object obj)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new AbsolutePageView());
+            
         }
     }
 }

@@ -12,6 +12,8 @@
 
         <Button Grid.Row="0" Grid.Column="0" Text="Absolute"
                         Command="{Binding OnAbsoluteClicked}"/>
+            <Button Grid.Row="4" Grid.Column="0" Text="Absolute Page"
+                        Command="{Binding OnAbsolutePageClicked}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
