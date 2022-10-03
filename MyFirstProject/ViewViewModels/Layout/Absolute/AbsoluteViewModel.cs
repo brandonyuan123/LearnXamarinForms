@@ -13,7 +13,7 @@ namespace MyFirstProject.ViewViewModels.Layout.Absolute
     {
         public AbsoluteViewModel()
         {
-            Title = Titles.AbsolutePageTitle;
+            Title = Titles.AbsoluteTitle;
             
         }
     }

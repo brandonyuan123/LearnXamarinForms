@@ -12,7 +12,7 @@
                 TextColor="Black"
                 FontSize="Large"
                 FontAttributes="Bold"
-            />
+                />
 
             <BoxView Color="Green"
                      AbsoluteLayout.LayoutBounds="0.125,0.2,75,50"

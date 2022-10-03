@@ -10,10 +10,12 @@
                 HorizontalOptions="CenterAndExpand" />
         
 
-        <Button Grid.Row="0" Grid.Column="0" Text="Absolute"
+            <Button Grid.Row="0" Grid.Column="0" Text="Absolute"
                         Command="{Binding OnAbsoluteClicked}"/>
-            <Button Grid.Row="4" Grid.Column="0" Text="Absolute Page"
+            <Button Grid.Row="0" Grid.Column="1" Text="Absolute Page"
                         Command="{Binding OnAbsolutePageClicked}"/>
+            <Button Grid.Row="1" Grid.Column="0" Text="Relative"
+                        Command="{Binding OnRelativeClicked}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
