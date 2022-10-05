@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Layout.RelativeLayout.RelativeLayoutView"
+             Title="{Binding Title}"
+             BackgroundColor="green">
+    <ContentPage.Content>
+        <RelativeLayout>
+
+            <BoxView Color="Red"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, 
+												Constant=100}"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant,
+												Constant=200}" />
+            <BoxView Color="HotPink"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+												Property=Width, Constant=-135}"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant,
+												Constant=200}" />
+            <BoxView Color="Blue"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,
+												Constant=100}"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+												Property=Height, Constant=-300}" />
+            <BoxView x:Name="lastBox"
+				 Color="maroon"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+												Property=Width, Constant=-135}"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+												Property=Height, Constant=-300}" />
+
+            <BoxView Color="silver"
+				 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+											  ElementName=lastBox, Property=X, Constant=13}"
+				 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+											  ElementName=lastBox, Property=Y, Constant=13}"
+				 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,
+											      ElementName=lastBox, Property=Width,
+												  Factor=0.33}"
+				 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,
+												   ElementName=lastBox, Property=Height,
+												   Factor=0.33}" />
+
+            <Label Text="Relative Page!"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+											  ElementName=lastBox, Property=X, Constant=-150}"
+				 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+											  ElementName=lastBox, Property=Y, Constant=-400}"
+			
+             
+                TextColor="Black"
+                FontSize="Large"
+                FontAttributes="Bold"
+                />
+            
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

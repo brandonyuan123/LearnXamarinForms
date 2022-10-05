@@ -16,5 +16,6 @@ namespace MyFirstProject.Models
         public static string AbsoluteTitle { get; } = "Absolute View";
         public static string AbsolutePageTitle { get; } = "Absolute Page View";
         public static string RelativeTitle { get; } = "Relative View";
+        public static string RelativeLayoutTitle { get; } = "Relative Layout View";
     }
 }

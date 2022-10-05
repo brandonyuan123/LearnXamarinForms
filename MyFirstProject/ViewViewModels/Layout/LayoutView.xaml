@@ -12,10 +12,12 @@
 
             <Button Grid.Row="0" Grid.Column="0" Text="Absolute"
                         Command="{Binding OnAbsoluteClicked}"/>
-            <Button Grid.Row="0" Grid.Column="1" Text="Absolute Page"
+            <Button Grid.Row="1" Grid.Column="0" Text="Absolute Page"
                         Command="{Binding OnAbsolutePageClicked}"/>
-            <Button Grid.Row="1" Grid.Column="0" Text="Relative"
+            <Button Grid.Row="2" Grid.Column="0" Text="Relative"
                         Command="{Binding OnRelativeClicked}"/>
+            <Button Grid.Row="3" Grid.Column="0" Text="Relative Layout"
+                        Command="{Binding OnRelativeLayoutClicked}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
