@@ -5,7 +5,10 @@
              Title="{Binding Title}">
 
     <StackLayout>
-       
+
+        <Button Grid.Row="0" Grid.Column="0" Text="Image Menu"
+                        Command="{Binding OnImageMenuClicked}"/>
+
     </StackLayout>
 
 </ContentPage>
