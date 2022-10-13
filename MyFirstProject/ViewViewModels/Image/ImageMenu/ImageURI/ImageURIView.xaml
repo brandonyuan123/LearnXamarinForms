@@ -5,9 +5,9 @@
              Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Image Source="{Binding ImageSrc}"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

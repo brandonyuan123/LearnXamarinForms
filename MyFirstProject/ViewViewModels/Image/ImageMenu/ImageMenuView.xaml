@@ -5,9 +5,10 @@
              Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Button Grid.Row="0" Grid.Column="0" Text="Image URI"
+                        Command="{Binding OnImageURIClicked}"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
