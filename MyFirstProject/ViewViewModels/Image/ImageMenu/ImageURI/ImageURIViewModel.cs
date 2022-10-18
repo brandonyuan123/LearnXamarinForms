@@ -18,7 +18,7 @@ namespace MyFirstProject.ViewViewModels.Image.ImageURI
 
         private ImageSource SetImageSrc()
         {
-            var imgsrc = new UriImageSource { Uri = new Uri("https://media.architecturaldigest.com/photos/58f918044f42bd463db36a3f/4:3/w_2663,h_1997,c_limit/1%20-%2010%20Greenest%20Cities%20in%20America%20in%202017.jpg") };
+            var imgsrc = new UriImageSource {Uri = new Uri(Images.ImageURI)};
             imgsrc.CachingEnabled = false;
             imgsrc.CacheValidity = TimeSpan.FromHours(1);
 

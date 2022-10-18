@@ -1,15 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModels.Image.ImageURI.ImageURIView"
-             Title="{Binding Title}">
+             x:Class="MyFirstProject.ViewViewModels.Image.ImageMenu.EmbeddedImage.EmbeddedImageView">
     <ContentPage.Content>
         <StackLayout>
 
-            <Image Source="{Binding ImageSrc}"
-                   Aspect="AspectFit"/>
+            <Image Source="{Binding ImageSrc}"/>
 
-       
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
