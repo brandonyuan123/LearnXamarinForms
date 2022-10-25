@@ -10,14 +10,16 @@ namespace MyFirstProject.ViewViewModels.Image.ImageMenu.EmbeddedImage
     class EmbeddedImageViewModel : BaseViewModel
     {
         public ImageSource EmbeddedImageSrc { get; set; }
+
         public EmbeddedImageViewModel()
         {
             Title = Titles.EmbeddedImageTitle;
+            this.getEmbeddedImageSrc();
         }
 
         private void getEmbeddedImageSrc()
         {
-            EmbeddedImageSrc = ImageSource.FromResource("MyFirstProject.Images.wah.jfif");
+            EmbeddedImageSrc = ImageSource.FromResource("MyFirstProject.Images.china.jpg");
         }
     }
 }

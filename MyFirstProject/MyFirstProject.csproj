@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,8 +11,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Images\Images.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\china.jpg" />
+    <None Remove="Images\wah.jfif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\china.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Models\Images.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\wah.jfif" />
   </ItemGroup>
 
   <ItemGroup>

@@ -17,13 +17,18 @@ namespace MyFirstProject.ViewViewModels.Image.ImageMenu
         public ImageMenuViewModel()
         {
             Title = Titles.ImageMenuTitle;
-            OnImageURIClicked = new Command(OnEmbeddedImageClickedAsync);
+            OnImageURIClicked = new Command(OnImageURIClickedAsync);
             OnEmbeddedImageClicked = new Command(OnEmbeddedImageClickedAsync);
         }
 
         private async void OnEmbeddedImageClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new EmbeddedImageView());
+        }
+
+        private async void OnImageURIClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new ImageURIView());
         }
     }
 }

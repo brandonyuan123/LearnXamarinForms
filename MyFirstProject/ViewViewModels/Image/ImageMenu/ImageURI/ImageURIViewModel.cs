@@ -24,5 +24,5 @@ namespace MyFirstProject.ViewViewModels.Image.ImageURI
 
             return imgsrc;
         }
-    }   
+    }
 }
