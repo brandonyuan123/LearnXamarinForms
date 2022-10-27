@@ -22,6 +22,7 @@ namespace MyFirstProject.Models
         public static string ImageMenuTitle { get; } = "Image Menu";
         public static string ImageURITitle { get; } = "URI Image";
         public static string EmbeddedImageTitle { get; } = "Embedded Image";
+        public static string ActivityIndicatorTitle { get; } = "Activity Indicator";
         #endregion
         #region LISTVIEW
         public static string ListViewTitle { get; } = "ListView View";

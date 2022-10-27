@@ -10,6 +10,8 @@
                         Command="{Binding OnImageURIClicked}"/>
             <Button Grid.Row="1" Grid.Column="0" Text="Embedded Image"
                         Command="{Binding OnEmbeddedImageClicked}"/>
+            <Button Grid.Row="2" Grid.Column="0" Text="Activity Indicator"
+                        Command="{Binding OnActivityIndicatorClicked}"/>
 
         </StackLayout>
     </ContentPage.Content>

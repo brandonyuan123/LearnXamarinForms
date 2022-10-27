@@ -2,12 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstProject.ViewViewModels.Image.ImageMenu.EmbeddedImage.EmbeddedImageView"
-             >
+             Title="{Binding Title}">
+
+
     <ContentPage.Content>
-        <StackLayout>
-
-            <Image Source="{Binding ImageSrc}"/>
-
-        </StackLayout>
+        <Image Source="{Binding EmbeddedImageSrc}"/>
     </ContentPage.Content>
+        
 </ContentPage>
