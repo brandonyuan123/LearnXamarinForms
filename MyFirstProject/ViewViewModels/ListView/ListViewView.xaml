@@ -5,9 +5,10 @@
              Title="{Binding Title}">
     
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Button Grid.Row="0" Grid.Column="0" Text="List Menu"
+                        Command="{Binding OnListMenuClicked}"/>
+
+    </StackLayout>
     
 </ContentPage>

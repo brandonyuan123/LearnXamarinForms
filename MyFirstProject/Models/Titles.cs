@@ -26,6 +26,8 @@ namespace MyFirstProject.Models
         #endregion
         #region LISTVIEW
         public static string ListViewTitle { get; } = "ListView View";
+        public static string ListMenuTitle { get; } = "ListMenu View";
+        public static string DisplayPeopleTitle { get; } = "DisplayPeople View";
         #endregion
         #region SQLITE
         public static string SQLiteTitle { get; } = "SQLite View";
