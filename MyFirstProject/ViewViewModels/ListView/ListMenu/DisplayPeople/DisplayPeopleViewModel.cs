@@ -12,13 +12,13 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu.DisplayPeople
     {
         public ObservableCollection<Person> PersonsCollection { get; }
 
-        private List<Person> personList;
+        private List<Person> PersonList;
 
         public DisplayPeopleViewModel ()
         {
             Title = Titles.DisplayPeopleTitle;
             PersonsCollection = new ObservableCollection<Person>();
-            personList = Person.getNames();
+            PersonList = Person.GetNames();
             this.LoadPersons();
         }
 
@@ -27,7 +27,7 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu.DisplayPeople
             try
             {
                 PersonsCollection.Clear();
-                foreach (var p in personList)
+                foreach (var p in PersonList)
                 {
                     PersonsCollection.Add(p);
                 }
