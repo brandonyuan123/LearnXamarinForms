@@ -11,7 +11,6 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu.DisplayPeople
     class DisplayPeopleViewModel : BaseViewModel
     {
         public ObservableCollection<Person> PersonsCollection { get; }
-
         private List<Person> PersonList;
 
         public DisplayPeopleViewModel ()
