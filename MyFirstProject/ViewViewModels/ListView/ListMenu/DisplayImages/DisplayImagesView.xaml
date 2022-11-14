@@ -1,58 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:model="clr-namespace:MyFirstProject.Models"
-             x:Class="MyFirstProject.ViewViewModels.ListView.ListMenu.DisplayImages.DisplayImagesView"
-             Title="{Binding Title}">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:model="clr-namespace:MyFirstProject.Models"
+			 x:Class="MyFirstProject.ViewViewModels.ListView.ListMenu.DisplayImages.DisplayImagesView"
+			 Title="{Binding Title}">
 
-    <CollectionView x:Name="ItemsListView"
-                    ItemsSource="{Binding PersonsCollection}"
-                    SelectionMode="None"
-                    ItemsLayout="VerticalList">
+    <StackLayout>
+        <Label Text="World Leaders"
+			   TextColor="Black"
+			   FontAttributes="Bold"
+			   FontSize="20"
+			   TranslationY="10"
+			   HorizontalTextAlignment="Center"
+			   />
 
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
+        <CollectionView x:Name="ItemsListView"
+								ItemsSource="{Binding PersonsCollection}"
+								SelectionMode="None"
+								ItemsLayout="VerticalList">
 
-                <Grid Padding="10" Margin="12">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                    </Grid.RowDefinitions>
+                    <Grid Padding="10" Margin="12">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
 
-                    <StackLayout  Padding="10" x:DataType="model:Person" x:Name="PersonNames">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="100"/>
-                            </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                        <StackLayout  Padding="10" x:DataType="model:Person" x:Name="PersonNames">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
 
-                            <Image Source="{Binding URI}"
-                                       Grid.Column="0"
-                                       Aspect="Fill"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="500"/>
+                                </Grid.ColumnDefinitions>
 
-                            <Label Text="{Binding Name}"
-                                   Grid.Column="1"
-                                   Grid.Row="0"
-                                   LineBreakMode="NoWrap"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="Black"/>
+                                <Image Source="{Binding URI}"
+									   Grid.Column="0"
+									   Aspect="AspectFit"/>
 
-                        </Grid>
-                    </StackLayout>
+                                <Label Text="{Binding Name}"
+									   Grid.Column="1"
+									   Grid.Row="0"
+									   LineBreakMode="NoWrap"
+									   FontSize="16"
+									   FontAttributes="Bold"
+									   TextColor="Teal"/>
 
-                </Grid>
+                                <Label Text="{Binding Subtitle}"
+									   Grid.Column="1"
+									   Grid.Row="0"
+									   LineBreakMode="NoWrap"
+									   FontSize="14"
+									   FontAttributes="none"
+									   TextColor="CornflowerBlue"
+									   VerticalTextAlignment="Start"
+									   TranslationY="25"/>
 
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-
-    </CollectionView>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>
