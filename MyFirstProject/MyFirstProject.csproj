@@ -79,6 +79,9 @@
     <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\ListMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\MovieButtons\EditMovieView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\MovieButtons\MovieButtonsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

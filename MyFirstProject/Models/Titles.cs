@@ -30,6 +30,7 @@ namespace MyFirstProject.Models
         public static string DisplayPeopleTitle { get; } = "DisplayPeople View";
         public static string DisplayImagesTitle { get; } = "DisplayImages View";
         public static string MovieButtonsTitle { get; } = "Movie Buttons View";
+        public static string EditFormTitle { get; } = "Edit Form View";
         #endregion
         #region SQLITE
         public static string SQLiteTitle { get; } = "SQLite View";
