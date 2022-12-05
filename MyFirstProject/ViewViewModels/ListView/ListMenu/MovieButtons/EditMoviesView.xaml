@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons.EditMoviesView"
+             Title="{Binding Title}">
+    <StackLayout Padding="5">
+
+        <Label Text="Movie Title"
+               FontAttributes="bold"
+               TextColor="black"/>
+
+        <Entry Placeholder="Enter Movie Title"
+               HorizontalOptions="FillAndExpand"
+               Text="{Binding MovieText}"
+               x:Name="MovieTitle"/>
+
+        <Button Text="Update"
+                Command="{Binding UpdateClicked}"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Maroon"
+                TextColor="White"
+                x:Name="saveBtn"/>
+        
+    </StackLayout>
+    
+</ContentPage>

@@ -79,7 +79,10 @@
     <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\ListMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\MovieButtons\EditMovieView.xaml">
+    <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\MovieButtons\AddMoviesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\MovieButtons\EditMoviesView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\MovieButtons\MovieButtonsView.xaml">

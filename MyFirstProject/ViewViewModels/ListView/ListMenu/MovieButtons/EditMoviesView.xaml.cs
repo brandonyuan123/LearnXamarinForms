@@ -11,13 +11,13 @@ using Xamarin.Forms.Xaml;
 namespace MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EditMovieView : ContentPage
+    public partial class EditMoviesView : ContentPage
     {
-        //public EditMovieView(Movies mov)
-        //{
-        //    InitializeComponent();
-        //    BindingContext = new EditMovieViewModel();
-        //    Title.Text = mov.Title;
-        //}
+        public EditMoviesView(Movies mov)
+        {
+            InitializeComponent();
+            this.BindingContext = new EditMoviesViewModel();
+            MovieTitle.Text = mov.Name;
+        }
     }
 }

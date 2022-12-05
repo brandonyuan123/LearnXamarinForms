@@ -14,12 +14,6 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons
         private List<Movies> movie;
         private ObservableCollection<Movies> movies;
 
-        public MovieButtonsViewModel()
-        {
-            Title = Titles.MovieButtonsTitle;
-            MovieCollection = new ObservableCollection<Movies>();
-        }
-
         public ObservableCollection<Movies> MovieCollection
         {
             get
@@ -33,8 +27,18 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons
             }
         }
 
-        private void loadMovies()
+        public MovieButtonsViewModel()
         {
+            Title = Titles.MovieButtonsTitle;
+            MovieCollection = new ObservableCollection<Movies>();
+            movie = Movies.GetMovies();
+            this.LoadMovies();
+        }
+
+        private void LoadMovies()
+        {
+            IsBusy = true;
+
             try
             {
                 movies.Clear();
@@ -46,6 +50,27 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        public Command AddCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Application.Current.MainPage.Navigation.PushAsync(new AddMoviesView());
+
+                    MessagingCenter.Subscribe<Movies>(this, "AddMovies", async (data) =>
+                    {
+                        MovieCollection.Add(data);
+                        MessagingCenter.Unsubscribe<Movies>(this, "AddMovies");
+                    });
+                });
             }
         }
 
