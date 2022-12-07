@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:model="clr-namespace:MyFirstProject.Models" 
+             xmlns:local="clr-namespace:MyFirstProject.ViewViewModels.ListView.ListMenu"
+             x:Class="MyFirstProject.ViewViewModels.ListView.ListMenu.IconButtonsView"
+             Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="Addbtn" Command="{Binding AddCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Movies"
+                   FontSize="40"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Start"
+                   TextColor="DarkCyan"
+                   FontAttributes="Bold"/>
+        </StackLayout>
+
+        <Frame HeightRequest="2" Padding="0" HorizontalOptions="FillAndExpand" BackgroundColor="#000000"/>
+
+        <RefreshView x:DataType="local:IconButtonsViewModel" 
+                     IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+
+            <CollectionView x:Name="ItemsListView"
+                            ItemsSource="{Binding MovieCollection, Mode=TwoWay}"
+                            SelectionMode="None"
+                            ItemsLayout="VerticalList">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate x:DataType="model:Movies">
+                        <StackLayout>
+
+                            <Grid Padding="2">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Orientation="Horizontal">
+
+                                    <StackLayout>
+                                        <Label Text="{Binding Name, Mode=TwoWay}"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Start"
+                                               TextColor="Black"
+                                               FontSize="Medium"/>
+                                    </StackLayout>
+
+                                    <ImageButton Source="{Binding Path=BindingContext.EditImageSrc, Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                            Command="{Binding Path=BindingContext.UpdateCommand,
+                                                   Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                            CommandParameter="{Binding .}"
+                                            HorizontalOptions="EndAndExpand"/>
+
+                                    <ImageButton Source="{Binding Path=BindingContext.DeleteImageSrc, Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                            Command="{Binding Path=BindingContext.DeleteCommand,
+                                                    Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                            CommandParameter="{Binding .}"
+                                            HorizontalOptions="End"/>
+                                    
+                                    
+
+                                </StackLayout>
+                            </Grid>
+
+                            <Frame HeightRequest="2" Padding="0" HorizontalOptions="FillAndExpand" BackgroundColor="#000000"/>
+
+                        </StackLayout>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </RefreshView>
+
+    </StackLayout>
+
+</ContentPage>

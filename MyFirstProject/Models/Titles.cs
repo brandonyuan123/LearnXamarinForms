@@ -32,6 +32,7 @@ namespace MyFirstProject.Models
         public static string MovieButtonsTitle { get; } = "Movie Buttons View";
         public static string EditMoviesTitle { get; } = "Edit Movies View";
         public static string AddMoviesTitle { get; } = "Add Movies View";
+        public static string IconButtonsTitle { get; } = "Icon Movies View";
         #endregion
         #region SQLITE
         public static string SQLiteTitle { get; } = "SQLite View";

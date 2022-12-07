@@ -13,6 +13,9 @@
             
             <Button Grid.Row="2" Grid.Column="0" Text="Movie Buttons"
                         Command="{Binding OnMovieButtonsClicked}"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Text="Icon Buttons"
+                        Command="{Binding OnIconButtonsClicked}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

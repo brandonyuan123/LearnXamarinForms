@@ -16,6 +16,7 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu
         public ICommand OnDisplayPeopleClicked { get; set; }
         public ICommand OnDisplayImagesClicked { get; set; }
         public ICommand OnMovieButtonsClicked { get; set; }
+        public ICommand OnIconButtonsClicked { get; set; }
 
         public ListMenuViewModel()
         {
@@ -23,6 +24,7 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu
             OnDisplayPeopleClicked = new Command(OnDisplayPeopleClickedAsync);
             OnDisplayImagesClicked = new Command(OnDisplayImagesClickedAsync);
             OnMovieButtonsClicked = new Command(OnMovieButtonsClickedAsync);
+            OnIconButtonsClicked = new Command(OnIconButtonsClickedAsync);
         }
 
         private async void OnDisplayPeopleClickedAsync(object obj)
@@ -37,6 +39,11 @@ namespace MyFirstProject.ViewViewModels.ListView.ListMenu
         private async void OnMovieButtonsClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new MovieButtonsView());
+        }
+
+        private async void OnIconButtonsClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new IconButtonsView());
         }
     }
 }

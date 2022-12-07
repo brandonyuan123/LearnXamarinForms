@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons
+namespace MyFirstProject.ViewViewModels.ListView.ListMenu
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddMoviesView : ContentPage
+    public partial class IconButtonsView : ContentPage
     {
-        public AddMoviesView()
+        public IconButtonsView()
         {
             InitializeComponent();
-            this.BindingContext = new AddMoviesViewModel();
+            this.BindingContext = new IconButtonsViewModel();
         }
     }
 }

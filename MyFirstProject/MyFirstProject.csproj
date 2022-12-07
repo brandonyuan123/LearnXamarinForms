@@ -16,11 +16,15 @@
 
   <ItemGroup>
     <None Remove="Images\china.jpg" />
+    <None Remove="Images\iconsdelete.png" />
+    <None Remove="Images\iconsedit.png" />
     <None Remove="Images\wah.jfif" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\china.jpg" />
+    <EmbeddedResource Include="Images\iconsdelete.png" />
+    <EmbeddedResource Include="Images\iconsedit.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,6 +78,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\DisplayPeople\DisplayPeopleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\IconButtons\IconButtonsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\ListView\ListMenu\ListMenuView.xaml">

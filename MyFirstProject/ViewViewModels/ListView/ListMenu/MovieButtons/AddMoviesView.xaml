@@ -1,12 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons.AddMoviesView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="MyFirstProject.ViewViewModels.ListView.ListMenu.MovieButtons.AddMoviesView"
+             Title="{Binding Title}">
+    
+    <StackLayout Padding="5">
+
+        <Label Text="Movie Title"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+        <Entry Placeholder="Enter Movie Title"
+                   FontSize="Small"
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding MovieText}"
+                   x:Name="Title"/>
+
+        <Button Text="Save"
+                Command="{Binding SaveBtnClicked}"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Maroon"
+                    TextColor="White"
+                    x:Name="saveBtn"/>
+
+    </StackLayout>
+
 </ContentPage>
