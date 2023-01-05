@@ -47,6 +47,9 @@
     <EmbeddedResource Update="ViewViewModels\Controls\Slider\SliderView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Controls\Stepper\StepperView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Image\ImageMenu\ActivityIndicator\ActivityIndicatorView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

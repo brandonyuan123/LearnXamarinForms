@@ -5,7 +5,9 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <Button Grid.Row="0" Grid.Column="0" Text="Slider"
-                        Command="{Binding OnSliderClicked}"/>
+        <Button Text="Slider"
+                Command="{Binding OnSliderClicked}"/>
+        <Button Text="Stepper"
+                Command="{Binding OnStepperClicked}"/>
     </StackLayout>
 </ContentPage>
