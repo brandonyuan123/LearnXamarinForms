@@ -39,6 +39,7 @@ namespace MyFirstProject.Models
         #endregion
         #region CONTROLS
         public static string ControlsTitle { get; } = "Controls View";
+        public static string SliderTitle { get; } = "Slider View";
         #endregion
     }
 }
