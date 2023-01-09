@@ -9,5 +9,9 @@
                 Command="{Binding OnSliderClicked}"/>
         <Button Text="Stepper"
                 Command="{Binding OnStepperClicked}"/>
+        <Button Text="Switch"
+                Command="{Binding OnSwitchClicked}"/>
+        <Button Text="Double Switch"
+                Command="{Binding OnDoubleSwitchClicked}"/>
     </StackLayout>
 </ContentPage>

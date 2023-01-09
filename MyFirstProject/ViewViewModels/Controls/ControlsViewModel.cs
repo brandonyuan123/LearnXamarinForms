@@ -1,5 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModels.Controls.DoubleSwitch;
 using MyFirstProject.ViewViewModels.Controls.Slider;
 using MyFirstProject.ViewViewModels.Controls.Stepper;
 using System;
@@ -14,12 +15,16 @@ namespace MyFirstProject.ViewViewModels.Controls
     {
         public ICommand OnSliderClicked { get; set; }
         public ICommand OnStepperClicked { get; set; }
+        public ICommand OnSwitchClicked { get; set; }
+        public ICommand OnDoubleSwitchClicked { get; set; }
 
         public ControlsViewModel()
         {
             Title = Titles.ControlsTitle;
             OnSliderClicked = new Command(OnSliderClickedAsync);
+            OnSwitchClicked = new Command(OnSwitchClickedAsync);
             OnStepperClicked = new Command(OnStepperClickedAsync);
+            OnDoubleSwitchClicked = new Command(OnDoubleSwitchClickedAsync);
         }
 
         private async void OnSliderClickedAsync(object obj)
@@ -29,6 +34,14 @@ namespace MyFirstProject.ViewViewModels.Controls
         private async void OnStepperClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new StepperView());
+        }
+        private async void OnSwitchClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new SwitchView());
+        }
+        private async void OnDoubleSwitchClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new DoubleSwitchView());
         }
     }
 }
