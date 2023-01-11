@@ -13,5 +13,7 @@
                 Command="{Binding OnSwitchClicked}"/>
         <Button Text="Double Switch"
                 Command="{Binding OnDoubleSwitchClicked}"/>
+        <Button Text="Entry"
+                Command="{Binding OnEntryClicked}"/>
     </StackLayout>
 </ContentPage>

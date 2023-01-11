@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModels.Controls.Entry.EntryView">
+             x:Class="MyFirstProject.ViewViewModels.Controls.Entry.EntryView"
+             Title="{Binding Title}">
 
     <StackLayout VerticalOptions="Center">
         <Entry Placeholder="Enter Text Here"
@@ -18,6 +19,13 @@
                 TextColor="White"
                 BackgroundColor="Blue"
                 Command="{Binding OnEntryClicked}" />
+
+        <Button Text="Go to Entry Results Page"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="LightBlue"
+                Command="{Binding OnResultsClicked}" />
     </StackLayout>
     
 </ContentPage>

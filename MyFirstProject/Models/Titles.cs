@@ -43,6 +43,8 @@ namespace MyFirstProject.Models
         public static string StepperTitle { get; } = "Stepper View";
         public static string SwitchTitle { get; } = "Switch View";
         public static string DoubleSwitchTitle { get; } = "Double Switch View";
+        public static string EntryTitle { get; } = "Entry View";
+        public static string ResultsTitle { get; } = "Results View";
         #endregion
     }
 }

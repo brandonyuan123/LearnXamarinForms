@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Controls.Entry
+namespace MyFirstProject.ViewViewModels.Controls.Entry.Results
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EntryView : ContentPage
+    public partial class ResultsView : ContentPage
     {
-        public EntryView()
+        public ResultsView()
         {
             InitializeComponent();
-            this.BindingContext = new EntryViewModel();
+            this.BindingContext = new ResultsViewModel();
         }
+
+
     }
 }
