@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Controls.Entry.Results
+namespace MyFirstProject.ViewViewModels.Controls.Picker
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ResultsView : ContentPage
+    public partial class PickerView : ContentPage
     {
-        public ResultsView(string text)
+        public PickerView()
         {
             InitializeComponent();
-            this.BindingContext = new ResultsViewModel();
-            this.label.Text = text;
         }
     }
 }

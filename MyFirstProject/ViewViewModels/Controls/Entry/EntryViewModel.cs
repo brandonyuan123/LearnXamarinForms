@@ -12,18 +12,15 @@ namespace MyFirstProject.ViewViewModels.Controls.Entry
 {
     class EntryViewModel:BaseViewModel
     {
-        public ObservableCollection<Entries> entries;
-
         public ICommand OnEntryClicked { get; }
-        public ICommand OnResultsClicked { get; }
-
         private string _entryText = string.Empty;
 
         public EntryViewModel()
         {
             Title = Titles.EntryTitle;
             OnEntryClicked = new Command(OnEntryClickedAsync);
-            OnResultsClicked = new Command(OnResultsClickedAsync);
+            
+            
         }
 
         public string EntryText
@@ -44,26 +41,8 @@ namespace MyFirstProject.ViewViewModels.Controls.Entry
                 await Application.Current.MainPage.DisplayAlert(Titles.EntryTitle, "Entry can't be empty!", "Ok");
                 return;
             }
-        }
-
-        public ObservableCollection<Entries> EntryCollection
-        {
-            get
-            {
-                return entries;
-            }
-            set
-            {
-                entries = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private async void OnResultsClickedAsync(object obj)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new ResultsView());
-            Entries entries = new Entries();
-            MessagingCenter.Send<Entries>(entries, EntryText);
+            else
+                Application.Current.MainPage.Navigation.PushAsync(new ResultsView(_entryText));
         }
     }
 }

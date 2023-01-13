@@ -20,12 +20,6 @@
                 BackgroundColor="Blue"
                 Command="{Binding OnEntryClicked}" />
 
-        <Button Text="Go to Entry Results Page"
-                HorizontalOptions="Center"
-                FontAttributes="Bold"
-                TextColor="White"
-                BackgroundColor="LightBlue"
-                Command="{Binding OnResultsClicked}" />
     </StackLayout>
     
 </ContentPage>
