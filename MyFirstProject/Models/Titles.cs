@@ -45,6 +45,7 @@ namespace MyFirstProject.Models
         public static string DoubleSwitchTitle { get; } = "Double Switch View";
         public static string EntryTitle { get; } = "Entry View";
         public static string ResultsTitle { get; } = "Results View";
+        public static string PickerTitle { get; } = "Picker View";
         #endregion
     }
 }

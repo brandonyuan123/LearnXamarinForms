@@ -15,16 +15,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\buttonblue.png" />
+    <None Remove="Images\buttonred.png" />
     <None Remove="Images\china.jpg" />
+    <None Remove="Images\dpbuttonblue.png" />
+    <None Remove="Images\dpbuttonred.png" />
     <None Remove="Images\iconsdelete.png" />
     <None Remove="Images\iconsedit.png" />
+    <None Remove="Images\SubmitButton.png" />
     <None Remove="Images\wah.jfif" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\buttonblue.png" />
+    <EmbeddedResource Include="Images\buttonred.png" />
     <EmbeddedResource Include="Images\china.jpg" />
+    <EmbeddedResource Include="Images\dpbuttonblue.png" />
+    <EmbeddedResource Include="Images\dpbuttonred.png" />
     <EmbeddedResource Include="Images\iconsdelete.png" />
     <EmbeddedResource Include="Images\iconsedit.png" />
+    <EmbeddedResource Include="Images\SubmitButton.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,6 +55,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Controls\DoubleSwitch\DoubleSwitchView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Controls\DualPicker\DualPickerView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Controls\Entry\EntryView.xaml">

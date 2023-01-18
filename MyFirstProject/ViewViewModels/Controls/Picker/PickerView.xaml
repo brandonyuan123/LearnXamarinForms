@@ -1,12 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModels.Controls.Picker.PickerView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="MyFirstProject.ViewViewModels.Controls.Picker.PickerView"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="0,20">
+        <Label Text="Picker XAML!"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+
+            <Picker x:Name="pickerXAML"
+                    Title="Select a car"
+                    TitleColor="DarkRed"
+                    SelectedItem="{Binding SelectedItem}"
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="300">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1970 Chevy Corvette</x:String>
+                        <x:String>1979 Chevy Camaro</x:String>
+                        <x:String>1970 Chevy Nova</x:String>
+                        <x:String>1975 Dodge Charger</x:String>
+                        <x:String>2018 Honda CRV</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
         </StackLayout>
-    </ContentPage.Content>
+
+        <StackLayout>
+            <Button ImageSource="{Binding SubmitImageSrc}"
+                    BackgroundColor="Transparent"
+                    Command="{Binding OnSubmitClicked}"/>
+        </StackLayout>
+        
+    </StackLayout>
 </ContentPage>

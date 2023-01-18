@@ -15,5 +15,7 @@
                 Command="{Binding OnDoubleSwitchClicked}"/>
         <Button Text="Entry"
                 Command="{Binding OnEntryClicked}"/>
+        <Button Text="Picker"
+                Command="{Binding OnPickerClicked}"/>
     </StackLayout>
 </ContentPage>

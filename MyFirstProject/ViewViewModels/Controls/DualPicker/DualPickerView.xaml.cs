@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Controls.Picker
+namespace MyFirstProject.ViewViewModels.Controls.DualPicker
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PickerView : ContentPage
+    public partial class DualPickerView : ContentPage
     {
-        public PickerView()
+        public DualPickerView()
         {
             InitializeComponent();
-            this.BindingContext = new PickerViewModel();
+            this.BindingContext = new DualPickerViewModel();
         }
     }
 }

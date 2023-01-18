@@ -2,6 +2,7 @@
 using MyFirstProject.ViewModels;
 using MyFirstProject.ViewViewModels.Controls.DoubleSwitch;
 using MyFirstProject.ViewViewModels.Controls.Entry;
+using MyFirstProject.ViewViewModels.Controls.Picker;
 using MyFirstProject.ViewViewModels.Controls.Slider;
 using MyFirstProject.ViewViewModels.Controls.Stepper;
 using System;
@@ -19,6 +20,7 @@ namespace MyFirstProject.ViewViewModels.Controls
         public ICommand OnSwitchClicked { get; set; }
         public ICommand OnDoubleSwitchClicked { get; set; }
         public ICommand OnEntryClicked { get; set; }
+        public ICommand OnPickerClicked { get; set; }
 
         public ControlsViewModel()
         {
@@ -28,6 +30,7 @@ namespace MyFirstProject.ViewViewModels.Controls
             OnStepperClicked = new Command(OnStepperClickedAsync);
             OnDoubleSwitchClicked = new Command(OnDoubleSwitchClickedAsync);
             OnEntryClicked = new Command(OnEntryClickedAsync);
+            OnPickerClicked = new Command(OnPickerClickedAsync);
         }
 
         private async void OnSliderClickedAsync(object obj)
@@ -49,6 +52,10 @@ namespace MyFirstProject.ViewViewModels.Controls
         private async void OnEntryClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new EntryView());
+        }
+        private async void OnPickerClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new PickerView());
         }
     }
 }
