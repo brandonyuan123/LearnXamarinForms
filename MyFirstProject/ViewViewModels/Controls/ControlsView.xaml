@@ -17,5 +17,7 @@
                 Command="{Binding OnEntryClicked}"/>
         <Button Text="Picker"
                 Command="{Binding OnPickerClicked}"/>
+        <Button Text="DualPicker"
+                Command="{Binding OnDualPickerClicked}"/>
     </StackLayout>
 </ContentPage>

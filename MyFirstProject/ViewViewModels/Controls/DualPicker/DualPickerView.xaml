@@ -12,13 +12,13 @@
                HorizontalOptions="CenterAndExpand"/>
 
         <StackLayout>
-            <Button ImageSource="{Binding SubmitImageSrc}"
+            <Button ImageSource="{Binding VMPicker}"
                     BackgroundColor="Transparent"
-                    Command="{Binding OnSubmitClicked}"/>
+                    Command="{Binding OnVMClicked}"/>
 
-            <Button ImageSource="{Binding SubmitImageSrc}"
+            <Button ImageSource="{Binding XAMLPicker}"
                     BackgroundColor="Transparent"
-                    Command="{Binding OnSubmitClicked}"/>
+                    Command="{Binding OnXAMLClicked}"/>
         </StackLayout>
 
     </StackLayout>
