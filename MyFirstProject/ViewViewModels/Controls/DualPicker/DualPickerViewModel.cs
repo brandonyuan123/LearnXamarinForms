@@ -32,6 +32,8 @@ namespace MyFirstProject.ViewViewModels.Controls.DualPicker
 
             OnXAMLClicked = new Command(OnXAMLClickedAsync);
             OnVMClicked = new Command(OnVMClickedAsync);
+
+            Title = Titles.DualPickerTitle;
         }
 
         private async void OnXAMLClickedAsync(object obj)

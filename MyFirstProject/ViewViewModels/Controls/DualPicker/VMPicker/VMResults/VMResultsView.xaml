@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Controls.DualPicker.VMPicker.VMResults.VMResultsView"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Picker Results!"
+                      FontSize="Large"
+                      FontAttributes="Bold"
+                      TextColor="Black"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Label x:Name="selectedCharacter"
+                   FontSize="Large"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Image x:Name="characterImage"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HeightRequest="300"
+                       WidthRequest="300"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

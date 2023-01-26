@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyFirstProject.Models
 {
-    class Person
+    public class Person
     {
         public string Name { get; set; }
         public string URI { get; set; }

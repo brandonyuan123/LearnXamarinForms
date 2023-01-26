@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Controls.DualPicker.VMPicker
+namespace MyFirstProject.ViewViewModels.Controls.DatePickerMenu.DatePickerXAML
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class VMPickerView : ContentPage
+    public partial class DatePickerXAMLView : ContentPage
     {
-        public VMPickerView()
+        public DatePickerXAMLView()
         {
             InitializeComponent();
-            this.BindingContext = new VMPickerViewModel();
+            this.BindingContext = new DatePickerXAMLViewModel();
         }
     }
 }
