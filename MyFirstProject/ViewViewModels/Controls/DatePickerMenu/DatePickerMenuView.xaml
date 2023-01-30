@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Controls.DatePickerMenu.DatePickerMenuView"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="0,20">
+        <Label Text="Date Picker Menu!"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <StackLayout>
+            <Button ImageSource="{Binding XAMLPicker}"
+                    BackgroundColor="Transparent"
+                    Command="{Binding OnVMClicked}"/>
+
+            <Button ImageSource="{Binding VMPicker}"
+                    BackgroundColor="Transparent"
+                    Command="{Binding OnXAMLClicked}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

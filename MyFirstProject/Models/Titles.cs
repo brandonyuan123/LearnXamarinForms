@@ -49,6 +49,10 @@ namespace MyFirstProject.Models
         public static string DualPickerTitle { get; } = "Dual Picker View";
         public static string VMPickerTitle { get; } = "VM Picker View";
         public static string VMResultsTitle { get; } = "VM ResultsPicker View";
+        public static string DatePickerMenuTitle { get; } = "Date Picker Menu View";
+        public static string DatePickerVMTitle { get; } = "Date Picker VM";
+        public static string DatePickerXAMLTitle { get; } = "Date Picker XAML";
+
         #endregion
     }
 }

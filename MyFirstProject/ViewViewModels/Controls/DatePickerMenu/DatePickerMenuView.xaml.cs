@@ -10,12 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace MyFirstProject.ViewViewModels.Controls.DatePickerMenu
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DatePickerView : ContentPage
+    public partial class DatePickerMenuView : ContentPage
     {
-        public DatePickerView()
+        public DatePickerMenuView()
         {
             InitializeComponent();
-            this.BindingContext = new DatePickerViewModel();
+            this.BindingContext = new DatePickerMenuViewModel();
         }
     }
 }
