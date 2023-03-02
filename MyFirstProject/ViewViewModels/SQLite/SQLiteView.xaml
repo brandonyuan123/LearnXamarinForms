@@ -3,11 +3,96 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstProject.ViewViewModels.SQLite.SQLiteView"
              Title="{Binding Title}">
-    
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="Addbtn" Command="{Binding AddCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Vacation Destinations"
+                   FontSize="25"
+                   FontAttributes="Bold,Italic"
+                   TextColor="CadetBlue"/>
         </StackLayout>
-    
+
+        <Frame HeightRequest="2" Padding="0" HorizontalOptions="FillAndExpand"
+               BackgroundColor="Black"/>
+
+        <CollectionView x:Name="VacationView"
+                            ItemsSource="{Binding VacationCollection, Mode=TwoWay}"
+                            SelectionMode="None"
+                            ItemsLayout="VerticalList">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate x:DataType="model:Vacation">
+                    <StackLayout>
+
+                        <Grid Padding="2">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <StackLayout>
+                                    <Label Text="{Binding Country, Mode=TwoWay}"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Start"
+                                           FontSize="Medium"
+                                           TextColor="Black"/>
+
+                                    <Label Text="{Binding City, Mode=TwoWay}"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Start"
+                                           FontSize="Medium"
+                                           TextColor="Black"/>
+
+                                    <StackLayout Orientation="Horizontal"
+                                                 HorizontalOptions="FillAndExpand">
+                                        <Label Text="Visited:"
+                                               FontAttributes="Bold"
+                                               Grid.Column="0"/>
+
+                                        <Switch x:Name="IsVisited"
+                                                IsToggled="{Binding Visited, Mode=TwoWay}"
+                                                Grid.Column="2"
+                                                Toggled="IsVisited"
+                                                ThumbColor="Red"
+                                                OnColor="Green"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <Button Text="Update"
+                                        Command="{Binding Path=BindingContext.AddCommand,
+                                                Source={x:Reference VacationView}, Mode=TwoWay}"
+                                        CommandParameter="{Binding .}"
+                                        HorizontalOptions="EndAndExpand"
+                                        TextTransform="None"/>
+
+                                <Button Text="Delete"
+                                        Command="{Binding Path=BindingContext.DeleteCommand,
+                                                Source={x:Reference VacationView}, Mode=TwoWay}"
+                                        CommandParameter="{Binding .}"
+                                        HorizontalOptions="End"
+                                        TextTransform="None"/>
+
+                            </StackLayout>
+
+                        </Grid>
+                        <Frame HeightRequest="2" Padding="0" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
+                    </StackLayout>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </StackLayout>
+
 </ContentPage>
