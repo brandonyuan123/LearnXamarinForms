@@ -8,7 +8,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UIKit;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(MyFirstProject.iOS.SQLiteIOS))]
 namespace MyFirstProject.iOS
 {
     public class SQLiteIOS : ISQLite
@@ -59,7 +61,7 @@ namespace MyFirstProject.iOS
                              $"SET Country = '{vacation.Country}', " +
                              $"City = '{vacation.City}', " +
                              $"Visited = '{vacation.Visited}', " +
-                             $"WHERE Id = '{vacation.ID}', ";
+                             $"WHERE Id = '{vacation.ID}' ";
                 con.Execute(sql);
                 res = true;
             }
@@ -76,5 +78,4 @@ namespace MyFirstProject.iOS
             con.Execute(sql);
         }
     }
-}
 }

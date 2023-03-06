@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,10 @@ namespace MyFirstProject.ViewViewModels.SQLite
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SQLiteAddVacationView : ContentPage
     {
-        public SQLiteAddVacationView()
+        public SQLiteAddVacationView(Vacation vacation)
         {
             InitializeComponent();
-            this.BindingContext = new SQLiteAddVacationViewModel();
+            this.BindingContext = new SQLiteAddVacationViewModel(vacation);
         }
     }
 }

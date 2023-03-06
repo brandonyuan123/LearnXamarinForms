@@ -22,7 +22,7 @@
         <Entry Placeholder="Enter City"
                FontSize="Medium"
                HorizontalOptions="FillAndExpand"
-               Text="{Binding Country}"
+               Text="{Binding City}"
                TextColor="Blue"
                x:Name="CityTitle"/>
 

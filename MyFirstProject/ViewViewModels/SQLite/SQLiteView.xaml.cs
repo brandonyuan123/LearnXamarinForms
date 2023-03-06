@@ -17,5 +17,10 @@ namespace MyFirstProject.ViewViewModels.SQLite
             InitializeComponent();
             this.BindingContext = new SQLiteViewModel();
         }
+
+        private void IsVisited_Toggled(object sender, ToggledEventArgs e)
+        {
+
+        }
     }
 }

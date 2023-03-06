@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:model="clr-namespace:MyFirstProject.Models"
              x:Class="MyFirstProject.ViewViewModels.SQLite.SQLiteView"
              Title="{Binding Title}">
 
@@ -60,7 +60,7 @@
                                         <Switch x:Name="IsVisited"
                                                 IsToggled="{Binding Visited, Mode=TwoWay}"
                                                 Grid.Column="2"
-                                                Toggled="IsVisited"
+                                                Toggled="IsVisited_Toggled"
                                                 ThumbColor="Red"
                                                 OnColor="Green"/>
 

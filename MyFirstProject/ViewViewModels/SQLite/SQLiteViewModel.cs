@@ -67,7 +67,7 @@ namespace MyFirstProject.ViewViewModels.SQLite
             {
                 return new Command<Vacation>((Vacation vacation) =>
                 {
-                    DependecyService.Get<ISQLite>().DeleteVacation(vacation.ID);
+                    DependencyService.Get<ISQLite>().DeleteVacation(vacation.ID);
                     VacationCollection.Remove(vacation);
                 });
             }

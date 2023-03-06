@@ -19,7 +19,7 @@ namespace MyFirstProject.ViewViewModels.SQLite
         public string ButtonText { get; set; }
 
 
-        public SQLiteVacationViewModel(Vacation vacation)
+        public SQLiteAddVacationViewModel(Vacation vacation)
         {
             if (vacation != null)
             {
@@ -74,7 +74,7 @@ namespace MyFirstProject.ViewViewModels.SQLite
                             vacation.City = this.City;
                             vacation.Visited = this.Visited;
 
-                            bool res = DependencyService.Get<ISQLite>().SaveVacation(vacation);
+                            bool res = DependencyService.Get<ISQLite>().UpdateVacation(vacation);
                             if (res)
                             {
                                 MessagingCenter.Send<Vacation>(vacation, "AddVacation");
