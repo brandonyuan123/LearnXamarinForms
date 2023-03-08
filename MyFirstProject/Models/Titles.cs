@@ -36,6 +36,7 @@ namespace MyFirstProject.Models
         #endregion
         #region SQLITE
         public static string SQLiteTitle { get; } = "SQLite View";
+        public static string AddSQLiteTitle { get; } = "Add SQLite View";
         #endregion
         #region CONTROLS
         public static string ControlsTitle { get; } = "Controls View";

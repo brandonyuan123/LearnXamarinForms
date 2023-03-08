@@ -60,9 +60,9 @@ namespace MyFirstProject.Droid
             {
                 string sql = $"UPDATE Vacation " +
                              $"SET Country = '{vacation.Country}', " +
-                             $"City = '{vacation.City}', " +
-                             $"Visited = '{vacation.Visited}', " +
-                             $"WHERE Id = '{vacation.ID}', ";
+                             $"City = '{vacation.City}', " +   
+                             $"Visited = '{vacation.Visited}' " +
+                             $"WHERE Id = {vacation.ID}";
                 con.Execute(sql);
                 res = true;
             }

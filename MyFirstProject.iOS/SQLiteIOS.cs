@@ -60,8 +60,8 @@ namespace MyFirstProject.iOS
                 string sql = $"UPDATE Vacation " +
                              $"SET Country = '{vacation.Country}', " +
                              $"City = '{vacation.City}', " +
-                             $"Visited = '{vacation.Visited}', " +
-                             $"WHERE Id = '{vacation.ID}' ";
+                             $"Visited = '{vacation.Visited}' " +
+                             $"WHERE Id = {vacation.ID}";
                 con.Execute(sql);
                 res = true;
             }
